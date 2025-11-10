@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>Unity WebGL Player</title>
+    <title>Unity WebGL クイズゲーム</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ URLパラメータ取得用の関数 -->
     <script>
         function GetURLParam(key) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(key);
         }
     </script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #222;
+            color: #fff;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        #unity-canvas {
+            width: 100%;
+            height: 100vh;
+            background: #000;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="unity-canvas" width="960" height="600"></canvas>
+    <canvas id="unity-canvas"></canvas>
+
     Build/UnityLoader.js</script>
     <script>
         createUnityInstance(document.querySelector("#unity-canvas"), {
@@ -20,7 +41,7 @@
         codeUrl: "Build/build.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "YourCompany",
-        productName: "YourProduct",
+        productName: "QuizGame",
         productVersion: "1.0",
         });
     </script>
