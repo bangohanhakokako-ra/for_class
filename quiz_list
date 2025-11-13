@@ -1,0 +1,13 @@
+{
+  "quizzes":[
+    {
+      "answer":"human"
+    },
+    {
+      "answer":"animal"
+    },
+    {
+      "answer":"anagram"
+    }
+  ]
+}
